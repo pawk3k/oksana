@@ -1,5 +1,4 @@
-// import React from 'react';
-import './App.css';
+import '../App.css';
 import React, { Component } from "react";
 
 
@@ -18,16 +17,18 @@ const THead = () =>{
 const TableBody = props => {
   const rows = props.characters.map((row, index) => {
     return (
+        <div>
       <tr key={index}>
         <td>{row.name}</td>
         <td>{row.job}</td>
-        <button onClick={() => props.removeCharacter(index)}>Delete</button>
+      <button onClick={() => props.removeCharacter(index)} className="">Delete</button>
       </tr>
+          </div>
     )
-  })
+  });
 
   return <tbody>{rows}</tbody>
-}
+};
 
 class Table extends Component {
   render() {
@@ -41,8 +42,4 @@ class Table extends Component {
     );
   }
 }
-
-// render(<App />, document.getElementById("root"));
-
-
 export default Table;

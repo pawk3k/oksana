@@ -1,7 +1,10 @@
-import '../App.css';
+import '../../App.css';
 import React, { Component } from "react";
 import MenuButton from "./MenuButton";
 import Menu from "./Menu"
+import TemplatesContainer from "../elements/TemplatesContainer";
+import arr from "../elements/output"
+
 
 class MenuCont extends Component {
 
@@ -10,7 +13,8 @@ class MenuCont extends Component {
     super(props);
 
     this.state = {
-        visible : false
+        visible: false,
+        dani: [0]
     };
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
@@ -23,6 +27,7 @@ class MenuCont extends Component {
   handleMouseDown(e){
         this.toggleMenu();
         console.log("clicked");
+        console.log(arr);
         e.stopPropagation();
   }
 
@@ -30,9 +35,9 @@ class MenuCont extends Component {
   render() {
     return (
         <div>
-            <Menu handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible}/>
             <MenuButton handleMouseDown={this.handleMouseDown}/>
-
+            <TemplatesContainer cont={this.state.dani}/>
+            <Menu handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible}/>
         </div>
 
   );

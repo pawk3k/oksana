@@ -1,0 +1,9 @@
+#my_id{
+    margin: 80px 80px 80px 80px;
+}
+/*#my_id:hover{*/
+/*    background-color: #61dafb;*/
+/*}*/
+img:hover {
+    opacity: 0.5;
+}

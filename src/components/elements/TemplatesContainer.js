@@ -1,18 +1,31 @@
 import React,{Component} from "react";
-const numbers = [1,2,3,"kek"];
-
+import Template from "./Template";
+import arr from "./output";
 function importAll(r) {
     return r.keys().map(r);
 }
 
 const images = importAll(require.context('./nefritistore', false, /\.(png|jpe?g|svg)$/));
 
-const full = images.map((x,index)=>
+// const full = images.map((x,index)=>
+// {
+//     return (
+//             <td key={index}>
+//                 {/*<img src={x} alt={'nothing'}/>*/}
+//                 <Template image={x} text={"kek"}/>
+//             </td>
+//     );
+// });
+const full = arr.map((x,index)=>
 {
     return (
-            <td key={index}><img src={x} alt={'nothing'}/></td>
+        <td key={index}>
+            {/*<img src={x} alt={'nothing'}/>*/}
+            <Template image={x.img_url} text={x.caption}/>
+        </td>
     );
 });
+
 let new_arr = [];
 var i,j,temparray,chunk = 3;
 for (i=0,j=full.length; i<j-4; i+=chunk) {
@@ -28,14 +41,13 @@ for (i=0,j=full.length; i<j-4; i+=chunk) {
         </tr>
     )
 
-
-    // do whatever
 }
-class Template extends Component{
+class TemplatesContainer extends Component{
 
     render() {
+
         return new_arr;
 
 }
 }
-export default Template;
+export default TemplatesContainer;
