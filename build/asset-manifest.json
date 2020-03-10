@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/oksana/static/css/main.8291d37b.chunk.css",
-    "main.js": "/oksana/static/js/main.5399e267.chunk.js",
-    "main.js.map": "/oksana/static/js/main.5399e267.chunk.js.map",
+    "main.css": "/oksana/static/css/main.32916216.chunk.css",
+    "main.js": "/oksana/static/js/main.70d6c8dc.chunk.js",
+    "main.js.map": "/oksana/static/js/main.70d6c8dc.chunk.js.map",
     "runtime-main.js": "/oksana/static/js/runtime-main.28f1ba16.js",
     "runtime-main.js.map": "/oksana/static/js/runtime-main.28f1ba16.js.map",
     "static/js/2.31c7cffe.chunk.js": "/oksana/static/js/2.31c7cffe.chunk.js",
     "static/js/2.31c7cffe.chunk.js.map": "/oksana/static/js/2.31c7cffe.chunk.js.map",
     "index.html": "/oksana/index.html",
-    "precache-manifest.45803e4be15dd87cf8ca4c1761ba46c6.js": "/oksana/precache-manifest.45803e4be15dd87cf8ca4c1761ba46c6.js",
+    "precache-manifest.976576cd7b96c4d167c4f75eb05aad1b.js": "/oksana/precache-manifest.976576cd7b96c4d167c4f75eb05aad1b.js",
     "service-worker.js": "/oksana/service-worker.js",
-    "static/css/main.8291d37b.chunk.css.map": "/oksana/static/css/main.8291d37b.chunk.css.map",
+    "static/css/main.32916216.chunk.css.map": "/oksana/static/css/main.32916216.chunk.css.map",
     "static/js/2.31c7cffe.chunk.js.LICENSE.txt": "/oksana/static/js/2.31c7cffe.chunk.js.LICENSE.txt",
     "static/media/bot-0-0.jpg": "/oksana/static/media/bot-0-0.f0e5fc04.jpg",
     "static/media/bot-0-1.jpg": "/oksana/static/media/bot-0-1.0a6d730c.jpg",
@@ -200,7 +200,7 @@
   "entrypoints": [
     "static/js/runtime-main.28f1ba16.js",
     "static/js/2.31c7cffe.chunk.js",
-    "static/css/main.8291d37b.chunk.css",
-    "static/js/main.5399e267.chunk.js"
+    "static/css/main.32916216.chunk.css",
+    "static/js/main.70d6c8dc.chunk.js"
   ]
 }

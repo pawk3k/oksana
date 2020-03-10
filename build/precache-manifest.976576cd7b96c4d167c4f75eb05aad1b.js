@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fa50bb9b2b9016769f16bc6c10f0a3d6",
+    "revision": "4d843b2b730c3761c5e1efee09bea64c",
     "url": "/oksana/index.html"
   },
   {
-    "revision": "8a3f4dc62f2d299c73a4",
-    "url": "/oksana/static/css/main.8291d37b.chunk.css"
+    "revision": "c18d8612d4d03b0706cf",
+    "url": "/oksana/static/css/main.32916216.chunk.css"
   },
   {
     "revision": "fb8b17241cd616bfdc12",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/oksana/static/js/2.31c7cffe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8a3f4dc62f2d299c73a4",
-    "url": "/oksana/static/js/main.5399e267.chunk.js"
+    "revision": "c18d8612d4d03b0706cf",
+    "url": "/oksana/static/js/main.70d6c8dc.chunk.js"
   },
   {
     "revision": "a993da8aad8fb31b7a5a",
