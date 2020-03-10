@@ -20,8 +20,7 @@ const full = arr.map((x,index)=>
 {
     return (
         <td key={index}>
-            {/*<img src={x} alt={'nothing'}/>*/}
-            <Template image={x.img_url} text={x.caption}/>
+            <Template image={x.img_url} text={x.caption} my_key={x.key} key={index} />
         </td>
     );
 });
@@ -32,7 +31,7 @@ for (i=0,j=full.length; i<j-4; i+=chunk) {
     temparray = full.slice(i,i+chunk);
     console.log(temparray);
     new_arr.push(
-        <tr>
+        <tr key={i}>
             {
                 temparray.map( x =>{
                     return x;
