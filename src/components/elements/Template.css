@@ -14,11 +14,9 @@
 
 .opacity1{
     opacity: 1;
-    transition: 1s ease;
 }
 .opacity50{
     opacity: 50%;
-    transition: 1s ease;
 }
 
 .show{
