@@ -1,12 +1,14 @@
 // import React from 'react';
+import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
+// import React from 'react'
 import './App.css';
+import ParalaxMy from "./components/elements/ParallaxMy";
 import React, { Component } from "react";
 import { render } from "react-dom";
-import Table from "./components/Table";
-import Form from "./components/Form";
+import { ParallaxProvider } from 'react-scroll-parallax';
 import "./components/elements/TemplatesContainer"
 import MenuCont from "./components/MenuButton/MenuCont";
-import TemplatesContainer from "./components/elements/TemplatesContainer";
+
 class App extends Component {
   state = {
     characters: [
@@ -44,13 +46,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
-        <MenuCont/>
+        // <ParallaxProvider>
+      <div>
+        <ParalaxMy/>
+        {/*<MenuCont/>*/}
 
-        {/*<TemplatesContainer/>*/}
-        {/*<Table characters={this.state.characters} removeCharacter = {this.removeCharacter} />*/}
-        {/*<Form handleSubmit = {this.handleSubmit}/>*/}
       </div>
+        // {/*<TemplatesContainer/>*/}
+        // {/*<Table characters={this.state.characters} removeCharacter = {this.removeCharacter} />*/}
+        // {/*<Form handleSubmit = {this.handleSubmit}/>*/}
+    // </ParallaxProvider>);
     );
   }
 }

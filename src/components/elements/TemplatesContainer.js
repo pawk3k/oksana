@@ -1,11 +1,8 @@
 import React,{Component} from "react";
 import Template from "./Template";
 import arr from "./output";
-function importAll(r) {
-    return r.keys().map(r);
-}
 
-const images = importAll(require.context('./nefritistore', false, /\.(png|jpe?g|svg)$/));
+// const images = importAll(require.context('./nefritistore', false, /\.(png|jpe?g|svg)$/));
 
 // const full = images.map((x,index)=>
 // {
@@ -33,6 +30,7 @@ for (i=0,j=full.length; i<j-4; i+=chunk) {
     new_arr.push(
         <tr key={i}>
             {
+
                 temparray.map( x =>{
                     return x;
                 } )

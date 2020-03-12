@@ -2,6 +2,9 @@
     margin: 80px 80px 80px 80px;
     padding: 160px 160px 160px 160px;
 }
+#right_m{
+    margin-right: 25%;
+}
 /*#my_id:hover{*/
 /*    background-color: #61dafb;*/
 /*}*/
@@ -14,9 +17,11 @@
 
 .opacity1{
     opacity: 1;
+    transition: .3s ease;
 }
 .opacity50{
     opacity: 0.5;
+    transition: .3s ease;
 }
 
 .show{
@@ -66,7 +71,7 @@
     text-align: center;
 }
 
-/* When you move the mouse over the icon, change color */
-/*.fa-user:hover {*/
-/*    color: #eee;*/
-/*}*/
+ /*#When you move the mouse over the icon, change color*/
+.fa-user:hover {
+    color: #eee;
+}
