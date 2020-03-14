@@ -2,8 +2,8 @@ import '../../App.css';
 import React, { Component } from "react";
 import MenuButton from "./MenuButton";
 import Menu from "./Menu"
-import TemplatesContainer from "../elements/TemplatesContainer";
-import arr from "../elements/output"
+import TemplatesContainer from "../Template/TemplatesContainer";
+import arr from "../Template/output"
 
 
 class MenuCont extends Component {
@@ -26,17 +26,16 @@ class MenuCont extends Component {
   }
   handleMouseDown(e){
         this.toggleMenu();
-        console.log("clicked");
-        console.log(arr);
         e.stopPropagation();
   }
 
 
   render() {
     return (
-        <div>
+        <div className="container-sm" style={{alignItems:'center', justifyContent:'center',display: 'block'}}>
+            {/*<MenuButton handleMouseDown={this.handleMouseDown}/>*/}
             <MenuButton handleMouseDown={this.handleMouseDown}/>
-            <TemplatesContainer cont={this.state.dani}/>
+            <TemplatesContainer cont={this.state.dani} style={{alignItems:'center', justifyContent:'center',display: 'block'}} />
             <Menu handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible}/>
         </div>
 

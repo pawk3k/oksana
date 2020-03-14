@@ -1,42 +1,11 @@
 import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 import React from 'react'
-import ReactDOM from 'react-dom'
-import MenuCont from "../MenuButton/MenuCont";
 import './nef.svg'
-import TemplatesContainer from "./TemplatesContainer";
-// import { Parallax, ParallaxLayer } from 'react-spring/addons'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
 
-// Little helpers ...
+import { Switch, Route ,Link} from 'react-router-dom';
+
 const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`;
 // const url = (name, wrap = false) => `${wrap ? 'url(' : ''}${name}.svg${wrap ? ')' : ''}`;
-
-
-const Pink = ({ children }) => <span style={{ color: '#FF6AC1' }}>{children}</span>
-const Yellow = ({ children }) => <span style={{ color: '#EFF59B' }}>{children}</span>
-const Lightblue = ({ children }) => <span style={{ color: '#9AEDFE' }}>{children}</span>
-const Green = ({ children }) => <span style={{ color: '#57EE89' }}>{children}</span>
-const Blue = ({ children }) => <span style={{ color: '#57C7FF' }}>{children}</span>
-const Gray = ({ children }) => <span style={{ color: '#909090' }}>{children}</span>
-// const url = document.location.href;
-
-function Home() {
-    return <h2>Home</h2>;
-}
-
-function About() {
-    return <h2>About</h2>;
-}
-
-function Users() {
-    return <h2>Users</h2>;
-}
-
 class ParallaxMy extends React.Component {
     render() {
         return (
@@ -133,20 +102,28 @@ class ParallaxMy extends React.Component {
 
 
 
-            <Parallax pages={7} scrolling={true} vertical ref={ref => (this.parallax = ref)}>
+            <Parallax pages={2} scrolling={true} vertical ref={ref => (this.parallax = ref)}>
                 <div>
-                <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
-                <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
+                <ParallaxLayer offset={1} speed={0} style={{ backgroundColor: '#ff' }} />
+                <ParallaxLayer offset={2} speed={0} style={{ backgroundColor: '#adc59d' }} />
 
                 <ParallaxLayer
                     offset={0}
                     speed={0.1}
                     onClick={() => this.parallax.scrollTo(1)}
-                    style={{backgroundImage: 'url(' + require('./nef.svg') + ')', backgroundSize: 'cover' ,display: 'flex', alignItems: 'center', justifyContent: 'top' }}>
-                    <Router>
-                        <Link to="/l/kek">Home</Link>
-                    </Router>
-
+                    style={{backgroundImage: 'url(' + require('./nefritis2.svg') + ')', backgroundSize: 'cover' ,display: 'flex', alignItems: 'center', justifyContent: 'top' }}>
+                    <div>
+                        <Link to="/signup">
+                            <button variant="outlined">
+                                Shop
+                            </button>
+                        </Link>
+                        <Link to="/about2">
+                            <button variant="outlined" className="btn btn-danger">
+                                Counter
+                            </button>
+                        </Link>
+                    </div>
                     {/*<img src={url('bash')} style={{ width: '40%' }} />*/}
                 </ParallaxLayer>
                 <ParallaxLayer
@@ -156,6 +133,21 @@ class ParallaxMy extends React.Component {
                     style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     {/*<img src={url('clients-main')} style={{ width: '40%' }} />*/}
                 </ParallaxLayer>
+                    <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
+                        <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '60%' }} />
+                        <img src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
+                        <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
+
+                    </ParallaxLayer>
+
+                    <ParallaxLayer offset={1.7} speed={0.4} style={{ opacity: 0.6 }}>
+
+                        <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
+                        <img src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
+                    </ParallaxLayer>
+
+
+
 
                     <ParallaxLayer
                         offset={1}
@@ -165,7 +157,7 @@ class ParallaxMy extends React.Component {
                         {/*<img src={url('server')} style={{ width: '20%' }} />*/}
 
                         {/*<img src={url('clients-main')} style={{ width: '40%' }} />*/}
-                        <TemplatesContainer style={{width:'100%'}}/>
+                        {/*<TemplatesContainer style={{width:'100%'}}/>*/}
                     </ParallaxLayer>
 
 

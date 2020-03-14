@@ -11,10 +11,11 @@ render() {
 
     return (
         <div id="flyoutMenu" onMouseDown={this.props.handleMouseDown} className={visibility}>
-            <h2>G1</h2>
-            <h2>G2</h2>
-            <h2>G3</h2>
-            <h2>G4</h2>
+            <h2>Bags</h2>
+            <h2>Dress</h2>
+            <h2>Pants</h2>
+            <h2>Skirt</h2>
+            <h2>Jacket</h2>
 
         </div>
     )

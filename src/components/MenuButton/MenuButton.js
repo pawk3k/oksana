@@ -5,7 +5,8 @@ import {FaBars} from 'react-icons/fa';
 class MenuButton extends Component{
 render() {
     return(
-        <div>       <button className="glyphicon glyphicon-align-justify" id="roundButton"
+        <div>
+            <button className="glyphicon glyphicon-align-justify" id="roundButton"
                             onMouseDown={this.props.handleMouseDown}>
             <FaBars/>
         </button>
