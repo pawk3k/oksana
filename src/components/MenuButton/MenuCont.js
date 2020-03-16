@@ -33,8 +33,7 @@ class MenuCont extends Component {
   render() {
     return (
         <div className="container-sm" style={{alignItems:'center', justifyContent:'center',display: 'block'}}>
-            {/*<MenuButton handleMouseDown={this.handleMouseDown}/>*/}
-            <MenuButton handleMouseDown={this.handleMouseDown}/>
+            <MenuButton handleMouseDown={this.handleMouseDown} />
             <TemplatesContainer cont={this.state.dani} style={{alignItems:'center', justifyContent:'center',display: 'block'}} />
             <Menu handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible}/>
         </div>

@@ -1,8 +1,8 @@
 #flyoutMenu{
     width:100vw;
     height: 100vh;
-    background-color: rebeccapurple;
-    position: fixed;
+    background-color: #adc59d;
+    position: absolute;
     top:0;
     left: 0;
     transition: transform .3s cubic-bezier(0.2, .2,.2,.2);
@@ -15,5 +15,18 @@
 }
 #flyoutMenu.show{
     transform: translate3d(0vw,0,0);
+
     overflow: hidden;
+}
+
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
 }

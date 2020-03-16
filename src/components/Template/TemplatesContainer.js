@@ -69,4 +69,4 @@ function mapStateToProps(state) {
 
 
 
-export default connect(mapStateToProps)(TemplatesContainer);
+export default  connect(mapStateToProps)(TemplatesContainer);

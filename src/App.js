@@ -10,8 +10,6 @@ import React, { Component } from "react";
 import { BrowserRouter } from 'react-router-dom';
 import { render } from "react-dom";
 import "./components/Template/TemplatesContainer"
-import MenuCont from "./components/MenuButton/MenuCont";
-import Counter from "./components/Counter";
 import arr from "./components/Template/output"
 import { Switch, Route ,Link} from 'react-router-dom';
 import {arr1} from "./components/Template/output";
@@ -24,19 +22,18 @@ const initialState = {
 function reducer(state=initialState,action) {
     switch(action.type) {
         case 'INCREMENT':
-            console.log(state.count + 1);
             return {
+                ...state,
                 count: state.count + 1
             };
         case 'DECREMENT':
-            console.log(state.count -1);
             return {
+                ...state,
                 count: state.count - 1
             };
         case 'DRESS':
-            console.log("kek")
-;            console.log(state.display_arr);
             return {
+                ...state,
                 display_arr: arr1
             };
         default:

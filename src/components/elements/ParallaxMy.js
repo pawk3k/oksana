@@ -104,12 +104,12 @@ class ParallaxMy extends React.Component {
 
             <Parallax pages={2} scrolling={true} vertical ref={ref => (this.parallax = ref)}>
                 <div>
-                <ParallaxLayer offset={1} speed={0} style={{ backgroundColor: '#ff' }} />
+                <ParallaxLayer offset={1} speed={0} style={{ backgroundColor: '#000000' }} />
                 <ParallaxLayer offset={2} speed={0} style={{ backgroundColor: '#adc59d' }} />
 
                 <ParallaxLayer
                     offset={0}
-                    speed={0.1}
+                    speed={0}
                     onClick={() => this.parallax.scrollTo(1)}
                     style={{backgroundImage: 'url(' + require('./nefritis2.svg') + ')', backgroundSize: 'cover' ,display: 'flex', alignItems: 'center', justifyContent: 'top' }}>
                     <div>
@@ -128,7 +128,7 @@ class ParallaxMy extends React.Component {
                 </ParallaxLayer>
                 <ParallaxLayer
                     offset={1}
-                    speed={0.1}
+                    speed={0}
                     onClick={() => this.parallax.scrollTo(0)}
                     style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     {/*<img src={url('clients-main')} style={{ width: '40%' }} />*/}
@@ -151,7 +151,7 @@ class ParallaxMy extends React.Component {
 
                     <ParallaxLayer
                         offset={1}
-                        speed={1.2}
+                        speed={0}
                         style={{ display: 'block', alignItems: 'center', justifyContent: 'center' }}
                         onClick={() => this.parallax.scrollTo(0)}>
                         {/*<img src={url('server')} style={{ width: '20%' }} />*/}
