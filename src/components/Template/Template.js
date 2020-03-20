@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import "./Template.css"
 // import { FaInstagram } from 'react-icons/fa';
-
+import "./News.css"
 class Template extends Component{
     state={
       visibility_my:false,
@@ -26,11 +26,11 @@ class Template extends Component{
         return(
                 <div>
                         <div className="container" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} >
-                            <img src={this.props.image} alt={"kek"} className={'image ' + opacity}/>
+                            <img src={this.props.image} alt={"kek"} className={'image grow ' + opacity}/>
                             <div className="overlay" >
-                                <a href={this.props.my_key} className="icon" title="instagram">
-                                    <i className={'fa fa-instagram ' + visibility}/>
-                                </a>
+                                {/*<a href={this.props.my_key} className="icon" title="instagram">*/}
+                                {/*    <i className={'fa fa-instagram ' + visibility}/>*/}
+                                {/*</a>*/}
                             </div>
                         </div>
                 </div>

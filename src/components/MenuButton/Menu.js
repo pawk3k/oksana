@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import "./Menu.css"
+import { IoIosClose } from "react-icons/io";
+
 import MenuButton from "./MenuButton";
 import {connect} from "react-redux";
 // class Menu extends Component{
@@ -47,20 +49,23 @@ import {connect} from "react-redux";
 //         }
 // }
 const Menu =(props) =>{
-    let visibility = "hide";
+    const [visibility,setVisibility] = useState(false);
+    // let visibility = "hide";
     const dispatch = useDispatch();
-    if(props.menuVisibility){
-        visibility = "show";
-    }
+    const visibility_m = useSelector(state => state.visibility_m);
+    // if(props.menuVisibility){
+    //     visibility = "show";
+    // }
+
     return(
-        <div id="flyoutMenu" onMouseDown={props.handleMouseDown} className={visibility}>
+        <div id="flyoutMenu" className={visibility_m}>
             <div className='container-fluid'>
-                <MenuButton/>
+                <MenuButton icon={<IoIosClose/>}/>
                 <div className="h-15 p-3">
-                    <button type="button" className="btn btn-primary block h-50 p-3" onMouseDown={() => dispatch({type:'DRESS'})}>Dress</button>
+                    <button type="button" className="btn btn-primary block h-50 p-3" onMouseDown={() => {dispatch({type:'DRESS'});dispatch({type:'MENU_N'})} }>Dress</button>
                 </div>
                 <div className="h-20 p-3">
-                    <button type="button" className="btn btn-primary block h-50 p-3" onMouseDown={() => dispatch({type:'DRESS'})}>Bags</button>
+                    <button type="button" className="btn btn-primary block h-50 p-3" onMouseDown={() => dispatch({type:'DRESS'}) }>Bags</button>
                 </div>
                 <div className="h-20 p-3">
                     <button type="button" className="btn btn-primary block h-50 p-3" onMouseDown={() => dispatch({type:'DRESS'})}>Pants</button>

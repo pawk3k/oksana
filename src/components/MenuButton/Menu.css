@@ -1,7 +1,7 @@
 #flyoutMenu{
     width:100vw;
     height: 100vh;
-    background-color: #adc59d;
+    background-color: #ffffff;
     position: absolute;
     top:0;
     left: 0;
@@ -23,10 +23,10 @@
     display: block;
     width: 100%;
     border: none;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #adc59d;
+    color: black;
     padding: 14px 28px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     text-align: center;
 }

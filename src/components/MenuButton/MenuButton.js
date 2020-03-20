@@ -1,5 +1,6 @@
-import React,{Component} from "react"
 import "./MenuButton.css";
+import React, { useState } from 'react';
+import {useDispatch, useSelector} from "react-redux";
 
 import {FaBars} from 'react-icons/fa';
 // import {IoIosClose} from 'react-icons/fa';
@@ -20,25 +21,18 @@ import { IoIosClose } from "react-icons/io";
 //
 // }
 
-class MenuButton extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isCardView: false,
-        };
-    }
+const MenuButton = (props) =>{
+    const dispatch = useDispatch();
 
-    render() {
         return (
-            <a className="btn btn-primary roundButton" onClick={()=>this.setState({ isCardView: !this.state.isCardView })}  onMouseDown={this.props.handleMouseDown}>
-                { this.state.isCardView
-                    ? <span className="glyphicon glyphicon-remove-sign"><FaBars/></span>
-                    : <span className="glyphicon glyphicon-ok-sign" ><IoIosClose/> </span>
+            <a className="btn btn-primary roundButton"   onMouseDown={() => dispatch({type:'MENU_N'})}>
+                {
+                    <span className="glyphicon glyphicon-remove-sign">{props.icon}</span>
                 }
 
             </a>
         );
-    }
 
-}
+
+};
 export default MenuButton;

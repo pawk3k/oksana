@@ -22,7 +22,6 @@ import { connect } from 'react-redux';
 class TemplatesContainer extends Component{
 
 
-
     dress = () => {
         this.props.dispatch({ type: 'DRESS' });
     };
@@ -53,9 +52,7 @@ class TemplatesContainer extends Component{
         return (
 
             <div>
-                <button type="button" className="btn btn-primary" onClick={this.dress}>+</button>
                 {new_arr};
-
             </div>
         )
     }

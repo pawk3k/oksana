@@ -1,6 +1,7 @@
 // import React from 'react';
 import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 // import React from 'react'
+//TODO change all Components to Function components
 import './App.css';
 import { createStore } from 'redux';
 import Main from "./components/Main/Main";
@@ -16,7 +17,8 @@ import {arr1} from "./components/Template/output";
 
 const initialState = {
     count: 0,
-    display_arr : arr
+    display_arr : arr,
+    visibility_m: "hide"
 };
 
 function reducer(state=initialState,action) {
@@ -36,6 +38,23 @@ function reducer(state=initialState,action) {
                 ...state,
                 display_arr: arr1
             };
+        case 'MENU_N':
+            if(state.visibility_m === "hide"){
+                return {
+                    ...state,
+                    visibility_m: "show"
+                }
+            }else{
+                return {
+                    ...state,
+                    visibility_m: "hide"
+                }
+            }
+        case 'MENU_V':
+            return{
+                ...state
+            };
+
         default:
             return state;
     }
