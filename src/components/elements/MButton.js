@@ -7,7 +7,7 @@ const MBtton =(props) =>{
     const [visibility,setVisibility] = useState(false);
     return(
         <div onMouseEnter={()=>{setVisibility(!visibility)}} onMouseLeave={()=>{setVisibility(!visibility)}}>
-            <button variant="outlined"  className={"btn btn-primary"}  >
+            <button variant="outlined"  className={"btn btn-success"}  >
                 Shop <FaArrowRight style={{visibility: visibility ? "visible": "hidden"}}/>
             </button>
         </div>

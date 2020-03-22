@@ -16,9 +16,11 @@ import { Switch, Route ,Link} from 'react-router-dom';
 import {arr1} from "./components/Template/output";
 
 const initialState = {
-    count: 0,
-    display_arr : arr,
-    visibility_m: "hide"
+    count: 0,// for counter
+    quantity:0, // number of items in buscket
+    display_arr : arr, // arr that is displayed in shop
+    visibility_m: "hide", //visibility of menu
+    basket_arr:[]
 };
 
 function reducer(state=initialState,action) {
@@ -54,7 +56,28 @@ function reducer(state=initialState,action) {
             return{
                 ...state
             };
-
+        case "INCQ":
+            const new_arr = state.basket_arr;
+            new_arr.push(action.item);
+            const {img,text,price} = action.item;
+            console.log(price);
+            console.log(text);
+            return {
+                ...state,
+                basket_arr: new_arr,
+              quantity: state.quantity + 1
+            };
+        case "REMOVE_ITEM":
+            let new_arr2 = state.basket_arr;
+            let new_arr3 = new_arr2;
+            let removed = new_arr3.splice(action.payload,1);
+            console.log(removed);
+            console.log(new_arr3);
+            return {
+                ...state,
+                quantity: state.quantity -1,
+                basket_arr: new_arr3
+            };
         default:
             return state;
     }

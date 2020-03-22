@@ -50,7 +50,6 @@ class TemplatesContainer extends Component{
         }
 
         return (
-
             <div>
                 {new_arr};
             </div>

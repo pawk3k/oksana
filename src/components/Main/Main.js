@@ -5,11 +5,13 @@ import MenuCont from "../MenuButton/MenuCont";
 import React from "react";
 import Menu from "../MenuButton/Menu";
 import News from "../Template/News";
+import Head from "../Head/Head";
+import CartList from "../Cart/CartList";
 const Main = () => {
     return (
         <Switch>
-            <Route exact path='/News' component={News}/>
-
+            <Route exact path='/News' component={Head}/>
+            <Route exact path='/cart' component={CartList}/>
             <Route exact path='/oksana' component={ParalaxMy}/>
             <Route exact path='/' component={ParalaxMy}/>
             <Route exact path='/about2' component={Counter}/>

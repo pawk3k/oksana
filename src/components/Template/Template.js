@@ -1,39 +1,22 @@
-import React,{Component} from "react";
+import React,{Component,useState} from "react";
 import "./Template.css"
+import {useDispatch, useSelector} from "react-redux";
+import {FaBars,FaShoppingBag} from 'react-icons/fa';
 // import { FaInstagram } from 'react-icons/fa';
 import "./News.css"
-class Template extends Component{
-    state={
-      visibility_my:false,
-        my_opacity:false
-    };
-    handleMouseEnter  = () => {this.setState({visibility_my:!this.state.visibility_my,
-                                                    my_opacity:!this.state.my_opacity
-    });
-    };
-    handleMouseLeave = () => {this.setState({visibility_my:!this.state.visibility_my,
-                                                    my_opacity:!this.state.my_opacity
-    })};
-    render() {
-        let visibility = "hide";
-        let opacity = "opacity1";
-        if(this.state.visibility_my){
-            visibility = "show";
-        }
-        if(this.state.my_opacity){
-            opacity = "opacity50";
-        }
-        return(
-                <div>
-                        <div className="container" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} >
-                            <img src={this.props.image} alt={"kek"} className={'image grow ' + opacity}/>
-                            <div className="overlay" >
-                                {/*<a href={this.props.my_key} className="icon" title="instagram">*/}
-                                {/*    <i className={'fa fa-instagram ' + visibility}/>*/}
-                                {/*</a>*/}
-                            </div>
-                        </div>
-                </div>
-        )}
-}
+
+const  Template = (props) =>{
+    const [visible,setV] = useState(false);
+    const dispatch = useDispatch();
+    const k = 3;
+    return (
+        <div>
+            <div className="container" onMouseEnter={() =>setV(!visible)} onMouseLeave={() =>setV(!visible)}>
+                <img src={props.image} alt={"kek"} className={'image grow '}/>
+                    <button onMouseDown={() => dispatch({type:'INCQ',item:{price:"3$" ,img: props.image, text:"kek"}})} className={'btn btn-primary ' } style={{visibility: visible ? "visible": "hidden"} } >+</button>
+            </div>
+        </div>
+  )
+};
+
 export default Template;

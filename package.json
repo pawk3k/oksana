@@ -1,7 +1,6 @@
 {
   "name": "oksana",
   "version": "0.1.0",
-  "homepage": "http://pawk3k.github.io/oksana",
   "private": true,
   "dependencies": {
     "@inlet/react-pixi": "^1.2.3",
