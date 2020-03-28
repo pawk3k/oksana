@@ -9,7 +9,7 @@ import { Switch, Route ,Link} from 'react-router-dom';
 import MenuButton from "../MenuButton/MenuButton";
 import "./styles.css"
 import svg from "../MenuButton/MenuCont"
-import News from "../Template/News";
+import News from "../News/News";
 import MBtton from "./MButton";
 const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`;
 // const url = (name, wrap = false) => `${wrap ? 'url(' : ''}${name}.svg${wrap ? ')' : ''}`;
@@ -25,10 +25,16 @@ class ParallaxMy extends React.Component {
 
     render() {
         return (
-            <Parallax pages={2} scrolling={true} vertical ref={ref => (this.parallax = ref)}>
+            <div className="container-fluid">
+            <Parallax pages={3} scrolling={true} vertical ref={ref => (this.parallax = ref)}>
                 <div>
                 <ParallaxLayer offset={1} speed={0} style={{ backgroundColor: '#ffffff' }} />
                 <ParallaxLayer offset={2} speed={0} style={{ backgroundColor: '#adc59d' }} />
+                    <ParallaxLayer offset={3} speed={0} style={{ backgroundColor: '#adc59d' }} >
+                        <div className="container-fluid" style={{display:'block',marginTop:"15%",marginLeft:"15%"}}>
+                            <News   />
+                        </div>
+                    </ParallaxLayer>
                 <ParallaxLayer
                     offset={0}
                     speed={0}
@@ -36,6 +42,9 @@ class ParallaxMy extends React.Component {
                     style={{backgroundImage: 'url(' + require('./nef.svg') + ')', backgroundSize: 'cover' ,display: 'flex', alignItems: 'center', justifyContent: 'top' }}>
                         <div style={{ display: 'block', width: '20%', marginLeft: '50%' ,marginTop:"10%"}}>
                             <Link to="/signup">
+                                <MBtton/>
+                            </Link>
+                            <Link to="/oksana">
                                 <MBtton/>
                             </Link>
                         </div>
@@ -66,9 +75,18 @@ class ParallaxMy extends React.Component {
                             <News   />
                         </div>
                     </ParallaxLayer>
+                    <ParallaxLayer
+                        offset={2}
+                        speed={0}
+                        style={{ display: 'block', alignItems: 'center', justifyContent: 'center' }}
+                        onClick={() => this.parallax.scrollTo(0)}>
+                        {/*<div className="container-fluid" style={{display:'block',marginTop:"15%",marginLeft:"15%"}}>*/}
+                            <News   />
+                        {/*</div>*/}
+                    </ParallaxLayer>
                 </div>
             </Parallax>
-
+            </div>
         )
     }
 }

@@ -14,7 +14,7 @@ import "./components/Template/TemplatesContainer"
 import arr from "./components/Template/output"
 import { Switch, Route ,Link} from 'react-router-dom';
 import {arr1} from "./components/Template/output";
-
+let arr2 =[];
 const initialState = {
     count: 0,// for counter
     quantity:0, // number of items in buscket
@@ -78,6 +78,10 @@ function reducer(state=initialState,action) {
                 quantity: state.quantity -1,
                 basket_arr: new_arr3
             };
+        case "ADD_I_DB":
+            arr2.push(action.payload)
+            // let my_new = stat
+
         default:
             return state;
     }

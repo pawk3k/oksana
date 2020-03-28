@@ -3,7 +3,7 @@ import "./Template.css"
 import {useDispatch, useSelector} from "react-redux";
 import {FaBars,FaShoppingBag} from 'react-icons/fa';
 // import { FaInstagram } from 'react-icons/fa';
-import "./News.css"
+import "../News/News.css"
 
 const  Template = (props) =>{
     const [visible,setV] = useState(false);

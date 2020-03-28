@@ -16,7 +16,7 @@ const CartList = (props) =>{
                 </div>
                 <div className="col-3"> {x.price}</div>
                 <div className="col-3"> {x.text}</div>
-                <div className="col-2" style={{backgroundColor: index%2===0 ? "#007F26" : "#16C44A"}} onMouseDown={() => dispatch({type:"REMOVE_ITEM",payload:index})}><FaTimes/></div>
+                <div className="col-2" style={{backgroundColor: index%2===0 ? "#007F26" : "#16C44A"}} onClick={() => dispatch({type:"REMOVE_ITEM",payload:index})}><FaTimes/></div>
 
             </div>
 
@@ -38,7 +38,7 @@ const CartList = (props) =>{
                 {new_arr}
                 <div className="row">
                     <div className="col-12">
-                        <button className="btn btn-danger">Proceed to Checkout</button>
+                        <button className="btn btn-danger" style={{marginTop:"20%"}}>Proceed to Checkout</button>
                     </div>
                 </div>
             </div>
