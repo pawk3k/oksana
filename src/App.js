@@ -16,6 +16,7 @@ import { Switch, Route ,Link} from 'react-router-dom';
 import {arr1} from "./components/Template/output";
 let arr2 =[];
 const initialState = {
+    new_shop_arr:arr2,//new_shop_arr
     count: 0,// for counter
     quantity:0, // number of items in buscket
     display_arr : arr, // arr that is displayed in shop
@@ -79,7 +80,11 @@ function reducer(state=initialState,action) {
                 basket_arr: new_arr3
             };
         case "ADD_I_DB":
-            arr2.push(action.payload)
+           let arr3= arr2.push(action.payload);
+    return {
+            ...state,
+            new_shop_arr: arr3,
+        };
             // let my_new = stat
 
         default:

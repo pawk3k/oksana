@@ -1,0 +1,16 @@
+[debug] [2020-03-31T12:32:56.825Z] ----------------------------------------------------------------------
+[debug] [2020-03-31T12:32:56.827Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2020-03-31T12:32:56.827Z] CLI Version:   7.15.1
+[debug] [2020-03-31T12:32:56.827Z] Platform:      linux
+[debug] [2020-03-31T12:32:56.827Z] Node Version:  v12.13.0
+[debug] [2020-03-31T12:32:56.828Z] Time:          Tue Mar 31 2020 14:32:56 GMT+0200 (Central European Summer Time)
+[debug] [2020-03-31T12:32:56.828Z] ----------------------------------------------------------------------
+[debug] [2020-03-31T12:32:56.828Z] 
+[debug] [2020-03-31T12:32:56.832Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-31T12:32:56.832Z] > authorizing via signed-in user
+[debug] [2020-03-31T12:32:56.832Z] [iam] checking project nefritis2 for permissions ["firebase.projects.get"]
+[debug] [2020-03-31T12:32:56.833Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/nefritis2:testIamPermissions  
+
+[debug] [2020-03-31T12:33:06.861Z] [iam] error while checking permissions, command may fail: FirebaseError: Server Error. getaddrinfo ENOTFOUND cloudresourcemanager.googleapis.com
+[debug] [2020-03-31T12:33:06.863Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/nefritis2  
+ 

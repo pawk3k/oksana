@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {Carousel,Form,Row,Col,Button,Container} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
+
 const Register = props =>{
     // its like dipatch
     const dispatch = useDispatch();

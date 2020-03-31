@@ -10,10 +10,14 @@ import CartList from "../Cart/CartList";
 import Title from "../Title/Title";
 import Register from "../add/Register";
 import Add from "../add/Add";
+import NewShop from "../../newShop/NewShop";
+import HelloMessage from "../../Hello";
 const Main = () => {
     return (
         <Switch>
+            <Route exact path='/Hello' component={HelloMessage}/>
             <Route exact path='/News' component={Head}/>
+            <Route exact path='/NewShop' component={NewShop}/>
             <Route exact path='/cart' component={CartList}/>
             <Route exact path='/oksana' component={Title}/>
             <Route exact path='/register' component={Register}/>
