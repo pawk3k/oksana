@@ -1,21 +1,18 @@
-import { Switch, Route ,Link} from 'react-router-dom';
-import ParalaxMy from "../elements/ParallaxMy";
+import { Switch, Route} from 'react-router-dom';
 import Counter from "../Counter";
 import MenuCont from "../MenuButton/MenuCont";
 import React from "react";
 import Menu from "../MenuButton/Menu";
-import News from "../News/News";
 import Head from "../Head/Head";
 import CartList from "../Cart/CartList";
 import Title from "../Title/Title";
 import Register from "../add/Register";
 import Add from "../add/Add";
 import NewShop from "../../newShop/NewShop";
-import HelloMessage from "../../Hello";
+// import HelloMessage from "../../Hello";
 const Main = () => {
     return (
         <Switch>
-            <Route exact path='/Hello' component={HelloMessage}/>
             <Route exact path='/News' component={Head}/>
             <Route exact path='/NewShop' component={NewShop}/>
             <Route exact path='/cart' component={CartList}/>
@@ -26,7 +23,6 @@ const Main = () => {
             <Route exact path='/about2' component={Counter}/>
             <Route exact path='/signup' component={MenuCont}/>
             <Route exact path='/menu' component={Menu}/>
-
         </Switch>
     );
 };
