@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 import MenuButton from "../MenuButton/MenuButton";
 import {FaArrowRight} from 'react-icons/fa';
-const MBtton =(props) =>{
+const ArrowButton = (props) =>{
     const [visibility,setVisibility] = useState(false);
     return(
         <div onMouseEnter={()=>{setVisibility(!visibility)}} onMouseLeave={()=>{setVisibility(!visibility)}}>
@@ -15,4 +15,4 @@ const MBtton =(props) =>{
 
 
 };
-export default MBtton
+export default ArrowButton
