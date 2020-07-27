@@ -27,7 +27,7 @@ const CartList = (props) =>{
             <div className="container">
                 <div className="row">
                     <div className="col-2">
-                        <Link to="/signup">
+                        <Link to="/home">
                             <FaArrowLeft/>
                         </Link>
                     </div>
