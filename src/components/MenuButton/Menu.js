@@ -2,6 +2,16 @@ import React, { useState } from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import "./Menu.css"
 import { IoIosClose } from "react-icons/io";
+import MenuButton from "./MenuButton";
+
+const Menu =(props) =>{
+    const [visibility,setVisibility] = useState(false);
+    // let visibility = "hide";
+    const dispatch = useDispatch();
+    const visibility_m = useSelector(state => state.visibility_m);
+    // if(props.menuVisibility){
+    //     visibility = "show";
+    // }
 
     return(
         <div id="flyoutMenu" className={visibility_m}>
@@ -30,6 +40,7 @@ import { IoIosClose } from "react-icons/io";
 };
 
 export default Menu;
+
 // function mapStateToProps(state) {
 //     return( {
 //         count: state.count,

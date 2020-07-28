@@ -9,7 +9,6 @@ import Title from "../Title/Title";
 import Register from "../add/Register";
 import Add from "../add/Add";
 import NewShop from "../../newShop/NewShop";
-// import HelloMessage from "../../Hello";
 const Main = () => {
     return (
         <Switch>

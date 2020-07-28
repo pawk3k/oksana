@@ -12,10 +12,10 @@ const CartList = (props) =>{
 
 
             <div key={index} className="row" style={{backgroundColor: index%2===0 ? "#16C44A" : "#007F26"}}>
-                <div className="col-4"><img src={x.img} alt={"kek"} className={'image grow '}/>
+                <div className="col-4"><img src={x.img} alt={"Simple dress"} className={'image grow '}/>
                 </div>
                 <div className="col-3"> {x.price}</div>
-                <div className="col-3"> {x.text}</div>
+                <div className="col-3">Simple dress</div>
                 <div className="col-2" style={{backgroundColor: index%2===0 ? "#007F26" : "#16C44A"}} onClick={() => dispatch({type:"REMOVE_ITEM",payload:index})}><FaTimes/></div>
 
             </div>
